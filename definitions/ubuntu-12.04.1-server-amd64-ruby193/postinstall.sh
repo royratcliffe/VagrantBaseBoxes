@@ -25,17 +25,17 @@ apt-get -y install nfs-common
 cd /tmp
 mkdir src
 cd src
-wget http://ftp.ruby-lang.org/pub/ruby/1.9/ruby-1.9.2-p290.tar.gz
-tar xvf ruby-1.9.2-p290.tar.gz
-cd ruby-1.9.2-p290
+wget http://ftp.ruby-lang.org/pub/ruby/1.9/ruby-1.9.3-p194.tar.gz
+tar xvf ruby-1.9.3-p194.tar.gz
+cd ruby-1.9.3-p194
 ./configure --prefix=/opt/ruby
 sudo make && sudo make install
 
-# Install RubyGems 1.8.10
+# Install RubyGems 1.8.24
 cd /tmp/src
-wget http://production.cf.rubygems.org/rubygems/rubygems-1.8.10.tgz
-tar xzf rubygems-1.8.10.tgz
-cd rubygems-1.8.10
+wget http://production.cf.rubygems.org/rubygems/rubygems-1.8.24.tgz
+tar xzf rubygems-1.8.24.tgz
+cd rubygems-1.8.24
 /opt/ruby/bin/ruby setup.rb
 
 # Installing chef & Puppet
