@@ -29,16 +29,15 @@ apt-get -y install nfs-common
 # Ruby requires libyaml
 apt-get -y install libyaml-dev
 
-# Install Ruby from source in /opt so that users of Vagrant
-# can install their own Rubies using packages or however.
-# We're installing 1.9.3 because we don't care about Puppet.
+# Install Ruby from source in /usr.
+# We're installing 1.9.3.
 cd /tmp
 mkdir src
 cd src
 wget http://ftp.ruby-lang.org/pub/ruby/1.9/ruby-1.9.3-p194.tar.gz
 tar xvf ruby-1.9.3-p194.tar.gz
 cd ruby-1.9.3-p194
-./configure --prefix=/opt/ruby
+./configure --prefix=/usr
 sudo make && sudo make install
 
 # Install RubyGems 1.8.24
@@ -46,16 +45,10 @@ cd /tmp/src
 wget http://production.cf.rubygems.org/rubygems/rubygems-1.8.24.tgz
 tar xzf rubygems-1.8.24.tgz
 cd rubygems-1.8.24
-/opt/ruby/bin/ruby setup.rb
+/usr/bin/ruby setup.rb
 
-# Installing chef & Puppet
-/opt/ruby/bin/gem install chef --no-ri --no-rdoc
-# Don't install puppet. We use chef.
-# /opt/ruby/bin/gem install puppet --no-ri --no-rdoc
-
-# Add /opt/ruby/bin to the global path as the last resort so
-# Ruby, RubyGems, and Chef/Puppet are visible
-echo 'PATH=$PATH:/opt/ruby/bin/'> /etc/profile.d/vagrantruby.sh
+# Installing Chef
+/usr/bin/gem install chef --no-ri --no-rdoc
 
 # Installing vagrant keys
 mkdir /home/vagrant/.ssh
