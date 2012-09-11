@@ -17,7 +17,9 @@ sed -i -e '/Defaults\s\+env_reset/a Defaults\texempt_group=admin' /etc/sudoers
 sed -i -e 's/%admin ALL=(ALL) ALL/%admin ALL=NOPASSWD:ALL/g' /etc/sudoers
 
 # Add the "admin" group if it does not already exist and add user "vagrant" to
-# that group.
+# that group. This also allows "vagrant basebox validate <boxname>" to continue
+# to completion. Without password-less sudo'ing, the Cucumber tests hang waiting
+# for a password.
 addgroup admin
 adduser vagrant admin
 
