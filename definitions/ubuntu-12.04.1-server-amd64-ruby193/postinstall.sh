@@ -19,6 +19,9 @@ sed -i -e 's/%admin ALL=(ALL) ALL/%admin ALL=NOPASSWD:ALL/g' /etc/sudoers
 # Install NFS client
 apt-get -y install nfs-common
 
+# Ruby requires libyaml
+apt-get -y install libyaml-dev
+
 # Install Ruby from source in /opt so that users of Vagrant
 # can install their own Rubies using packages or however.
 # We're installing 1.9.3 because we don't care about Puppet.
