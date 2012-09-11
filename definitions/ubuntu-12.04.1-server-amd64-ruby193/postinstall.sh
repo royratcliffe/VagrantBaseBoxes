@@ -21,7 +21,7 @@ apt-get -y install nfs-common
 
 # Install Ruby from source in /opt so that users of Vagrant
 # can install their own Rubies using packages or however.
-# We're installing 1.9.2 because we don't care about Puppet.
+# We're installing 1.9.3 because we don't care about Puppet.
 cd /tmp
 mkdir src
 cd src
