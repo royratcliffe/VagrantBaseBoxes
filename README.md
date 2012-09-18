@@ -21,8 +21,8 @@ Run Bundler to set up the necessary Ruby gems. Then build and validate the
 Vagrant base box.
 
 	bundle
-	vagrant build basebox ubuntu-12.04.1-server-amd64-ruby193
-	vagrant validate basebox ubuntu-12.04.1-server-amd64-ruby193
+	vagrant basebox build ubuntu-12.04.1-server-amd64-ruby193
+	vagrant basebox validate ubuntu-12.04.1-server-amd64-ruby193
 
 ## Issues
 
