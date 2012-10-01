@@ -17,12 +17,13 @@ Xcode-bundled version of `git`.
 
 ## Usage
 
-Run Bundler to set up the necessary Ruby gems. Then build and validate the
-Vagrant base box.
+Run Bundler to set up the necessary Ruby gems. Then build, validate and finally
+export the Vagrant base box.
 
 	bundle
 	vagrant basebox build ubuntu-12.04.1-server-amd64-ruby193
 	vagrant basebox validate ubuntu-12.04.1-server-amd64-ruby193
+	vagrant basebox export ubuntu-12.04.1-server-amd64-ruby193
 
 ## Issues
 
