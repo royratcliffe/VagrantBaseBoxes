@@ -48,8 +48,9 @@ tar xzf rubygems-1.8.24.tgz
 cd rubygems-1.8.24
 /usr/bin/ruby setup.rb
 
-# Installing Chef
-/usr/bin/gem install chef --no-ri --no-rdoc
+# Installing Chef, Bundler and Ruby Debug IDE gems. Building the debugger takes
+# some time. It builds a native extension.
+/usr/bin/gem install chef bundler ruby-debug-ide --no-ri --no-rdoc
 
 # Installing vagrant keys
 mkdir /home/vagrant/.ssh
