@@ -9,6 +9,7 @@ apt-get -y upgrade
 apt-get -y install linux-headers-$(uname -r) build-essential
 apt-get -y install zlib1g-dev libssl-dev libreadline5
 apt-get -y install libc6-dev libmysql++-dev libsqlite3-dev make libreadline5-dev zlib1g-dev
+apt-get -y install libffi-dev
 apt-get clean
 
 # Setup sudo to allow no-password sudo for "admin"
