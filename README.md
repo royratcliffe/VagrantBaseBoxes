@@ -27,6 +27,4 @@ export the Vagrant base box.
 
 ## Issues
 
-Tested successfully with VirtualBox version 4.1.22. At their current versions
-however, VirtualBox 4.2.0 and the `virtualbox` gem version 0.9.2 have a
-compatibility issue. Roll back to 4.1.22 if you see null pointer errors.
+Tested successfully with VirtualBox version 4.2.4.
