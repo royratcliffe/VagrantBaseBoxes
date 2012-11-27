@@ -23,7 +23,7 @@ export the Vagrant base box.
 	bundle
 	vagrant basebox build ubuntu-12.04.1-server-amd64-ruby193
 	vagrant basebox validate ubuntu-12.04.1-server-amd64-ruby193
-	vagrant basebox export ubuntu-12.04.1-server-amd64-ruby193
+	vagrant basebox export ubuntu-12.04.1-server-amd64-ruby193 --force
 
 ## Issues
 
